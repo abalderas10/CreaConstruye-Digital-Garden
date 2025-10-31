@@ -1,0 +1,54 @@
+# Jekyll Configuration for GitHub Pages
+title: CreaConstruye Digital Garden
+description: Tu jardín digital de conocimiento, proyectos e ideas
+
+# Site settings
+url: https://abalderas10.github.io
+baseurl: /CreaConstruye-Digital-Garden
+
+# Author
+author:
+  name: CreaConstruye
+  email: contact@creaconstruye.local
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - .obsidian
+  - .stfolder
+  - .stversions
+  - node_modules
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - "*.gem"
+  - "*.gemspec"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "LICENSE"
+  - "README.md"
+  - "SETUP.md"
+  - "push.sh"
+
+# Collections
+collections:
+  blog:
+    output: true
+    permalink: /:collection/:path/
+  proyectos:
+    output: true
+    permalink: /:collection/:path/
+
+# Pagination
+paginate: 10
+paginate_path: /page:num/
+
+# Localization
+timezone: America/Mexico_City
