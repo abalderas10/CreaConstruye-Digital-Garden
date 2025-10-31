@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🌱</text></svg>">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #10b981;
+            --primary-dark: #059669;
+            --primary-light: #d1fae5;
+            --accent: #06b6d4;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f9fafb;
+            --bg-white: #ffffff;
+            --border: #e5e7eb;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        header .container {
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: clamp(2em, 5vw, 3.5em);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: var(--bg-white);
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        nav a {
+            padding: 12px 20px;
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: 2px solid transparent;
+        }
+
+        nav a:hover {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            border-color: var(--primary);
+        }
+
+        main {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            flex: 1;
+        }
+
+        main h2 {
+            color: var(--text);
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 15px;
+        }
+
+        .posts-list {
+            display: grid;
+            gap: 25px;
+        }
+
+        .post-card {
+            background: linear-gradient(135deg, var(--bg) 0%, var(--bg-white) 100%);
+            border: 2px solid var(--border);
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .post-card h3 {
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .post-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .post-card h3 a:hover {
+            color: var(--primary-dark);
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9em;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .post-excerpt {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .post-card a.read-more {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .post-card a.read-more:hover {
+            color: var(--primary-dark);
+            transform: translateX(5px);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+        }
+
+        .empty-state h3 {
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+            }
+
+            header {
+                padding: 40px 20px;
+            }
+
+            .post-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.description }}</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <a href="{{ site.baseurl }}/">🏠 Inicio</a>
+            <a href="{{ site.baseurl }}/content/01-Blog/">📝 Blog</a>
+            <a href="{{ site.baseurl }}/content/02-Proyectos/">🚀 Proyectos</a>
+            <a href="{{ site.baseurl }}/content/03-Recursos/">📚 Recursos</a>
+            <a href="{{ site.baseurl }}/content/04-Herramientas/">🛠️ Herramientas</a>
+            <a href="https://github.com/abalderas10/CreaConstruye-Digital-Garden" target="_blank">⭐ GitHub</a>
+        </nav>
+
+        <main>
+            {{ content }}
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Hecho con ❤️ usando Obsidian + GitHub Pages.</p>
+        </div>
+    </footer>
+</body>
+</html>
