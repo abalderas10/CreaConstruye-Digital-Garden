@@ -1,0 +1,29 @@
+# Obsidian
+.obsidian/
+.stfolder/
+.stversions/
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Dependencies
+node_modules/
+Gemfile.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local

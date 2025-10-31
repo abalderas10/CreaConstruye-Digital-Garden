@@ -1,0 +1,55 @@
+# Digital Garden - CreaConstruye Vault
+# Configuración para GitHub Pages con Jekyll
+
+title: CreaConstruye - Digital Garden
+description: Tu jardín digital de conocimiento, proyectos e ideas
+url: https://tu-usuario.github.io/CreaConstruye-Digital-Garden
+baseurl: /CreaConstruye-Digital-Garden
+
+# Autor
+author:
+  name: Tu Nombre
+  email: tu-email@ejemplo.com
+
+# Configuración de Jekyll
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Excluir archivos
+exclude:
+  - .obsidian
+  - .stfolder
+  - .stversions
+  - node_modules
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+
+# Incluir archivos ocultos
+include:
+  - .htaccess
+
+# Configuración de Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  parse_block_html: true
+
+# Configuración de permalinks
+permalink: /:categories/:year/:month/:day/:title/
+
+# Collections
+collections:
+  blog:
+    output: true
+    permalink: /:collection/:path/
+  proyectos:
+    output: true
+    permalink: /:collection/:path/
+  recursos:
+    output: true
+    permalink: /:collection/:path/
