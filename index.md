@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Bienvenido a CreaConstruye Digital Garden
+title: CreaConstruye
 ---
 
-# Bienvenido a tu Jardín Digital 🌱
+# > CreaConstruye()
 
 Este es tu espacio para compartir conocimiento, proyectos e ideas en crecimiento constante. Un jardín digital que evoluciona con el tiempo, conectando ideas y creando nuevas perspectivas.
 
