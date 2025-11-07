@@ -102,6 +102,6 @@ La inteligencia artificial está redefiniendo el desarrollo inmobiliario, desde 
 
 ## Enlaces relacionados
 
-- [[04-Herramientas/HERRAMIENTAS-8-AUTOMATIZACION|Herramientas para Automatización de Proformas]]
-- [[02-Proyectos/PROYECTOS-CARTERA|Proyectos en Desarrollo]]
-- [[03-Recursos/RECURSOS-TECNICOS-REFERENCIAS|Recursos Adicionales]]
+- [[04-Herramientas/README|Herramientas para Automatización de Proformas]]
+- [[02-Proyectos/README|Proyectos en Desarrollo]]
+- [[03-Recursos/README|Recursos Adicionales]]

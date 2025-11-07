@@ -101,6 +101,6 @@ La inteligencia artificial está transformando la evaluación de riesgos en el d
 
 ## Enlaces relacionados
 
-- [[04-Herramientas/HERRAMIENTAS-8-AUTOMATIZACION|Herramientas para Evaluación de Riesgos]]
-- [[02-Proyectos/PROYECTOS-CARTERA|Proyectos en Desarrollo]]
-- [[03-Recursos/RECURSOS-TECNICOS-REFERENCIAS|Recursos Adicionales sobre IA]]
+- [[04-Herramientas/README|Herramientas para Evaluación de Riesgos]]
+- [[02-Proyectos/README|Proyectos en Desarrollo]]
+- [[03-Recursos/README|Recursos Adicionales sobre IA]]

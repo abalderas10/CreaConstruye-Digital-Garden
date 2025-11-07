@@ -164,9 +164,9 @@ El vault utiliza **enlaces internos de Obsidian** para conectar:
 ```
 README.md
   ↓
-04-Herramientas/HERRAMIENTAS-8-AUTOMATIZACION.md
+04-Herramientas/README.md
   ↓
-04-Herramientas/01-Analisis-Terrenos/TERRENOS-ANALISIS-UBICACION-VIABILIDAD.md
+04-Herramientas/01-Analisis-Terrenos/README.md
   ↓
 03-Recursos/APIs-Geoespaciales
 ```
@@ -235,9 +235,9 @@ date: YYYY-MM-DD
 ## 🛠️ Cómo Usar Este Vault
 
 ### Para Desarrolladores
-1. **Entender arquitectura:** Revisar 04-Herramientas/HERRAMIENTAS-8-AUTOMATIZACION.md
+1. **Entender arquitectura:** Revisar 04-Herramientas/README.md
 2. **Stack tecnológico:** Cada herramienta documenta su stack
-3. **APIs necesarias:** Ver 03-Recursos/RECURSOS-TECNICOS-REFERENCIAS.md
+3. **APIs necesarias:** Ver 03-Recursos/README.md
 4. **Empezar a codear:** Usar documentación como specs
 
 ### Para Usuarios de Negocio
@@ -249,7 +249,7 @@ date: YYYY-MM-DD
 ### Para Inversionistas
 1. **Visión general:** README.md principal
 2. **Propuesta de valor:** Artículo del blog
-3. **Roadmap:** 06-Ideas/IDEAS-ROADMAP-INNOVACION.md
+3. **Roadmap:** 06-Ideas/README.md
 4. **Métricas de negocio:** Modelos en cada herramienta
 
 ---
@@ -283,7 +283,7 @@ git push -u origin main
 **Para preguntas sobre:**
 - **Estructura del vault:** Ver este documento
 - **Herramientas técnicas:** Ver README de cada herramienta
-- **Blog y contenido:** Ver 01-Blog/BLOG-ARTICULOS-INDICE.md
+- **Blog y contenido:** Ver 01-Blog/README.md
 - **Contribuciones:** Ver README.md principal
 
 ---
